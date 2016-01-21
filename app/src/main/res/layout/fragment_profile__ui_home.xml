@@ -1,0 +1,194 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.srivastava.friends.profile_UI_home">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:id="@+id/imgAvatar"
+            android:src="@drawable/avatar"
+            android:layout_above="@+id/btnAlbum"
+            android:layout_centerHorizontal="true"
+            android:elevation="16dp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:id="@+id/txtUserName"
+                        android:layout_alignTop="@+id/imgNotifications"
+                        android:layout_toEndOf="@+id/txtGender"
+                        />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txtEditUserName"
+                            android:layout_alignTop="@+id/imgNotifications"
+                            android:layout_alignParentStart="true"
+                            android:hint="Enter User Name"
+                            android:visibility="gone" />
+
+                        <ImageButton
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:id="@+id/btnGo"
+                            android:visibility="gone"
+                            android:src="@drawable/success"
+                            android:elevation="8dp"
+                            android:scaleType="fitXY"
+                            android:background="@null" />
+
+                    </LinearLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtGender"
+                        android:layout_below="@+id/txtUserName"
+                        android:layout_alignParentStart="true" />
+
+                    <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spGender"
+                        android:layout_below="@+id/imgMessages"
+                        android:layout_toEndOf="@+id/txtGender"
+                        android:visibility="gone" />
+                </FrameLayout>
+            </LinearLayout>
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="8dp">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/fmAlbums">
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:elevation="0.01dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_weight="1">
+                    <RelativeLayout
+                        android:id="@+id/top_layout"
+                        android:layout_width="165dp"
+                        android:layout_height="125dp">
+
+                        <ImageView
+                            android:id="@+id/img_thumbnail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="130dp"
+                            android:scaleType="fitXY"
+                            android:layout_above="@+id/Albums" />
+                        <TextView
+                            android:id="@+id/Albums"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="2dp"
+                            android:layout_gravity="bottom"
+                            android:gravity="center_vertical"
+                            android:background="#4DD0E1"
+                            android:textColor="#fff"
+                            android:textSize="20dp"
+                            android:text="Albums"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true" />
+
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/fmFriends">
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:elevation="0.01dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_weight="1">
+                    <RelativeLayout
+                        android:id="@+id/top_layout1"
+                        android:layout_width="165dp"
+                        android:layout_height="125dp">
+
+                        <ImageView
+                            android:id="@+id/img_thumbnail1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="130dp"
+                            android:scaleType="fitXY"
+                            android:layout_above="@+id/Friends" />
+                        <TextView
+                            android:id="@+id/Friends"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="2dp"
+                            android:layout_gravity="bottom"
+                            android:gravity="center_vertical"
+                            android:background="#4DD0E1"
+                            android:textColor="#fff"
+                            android:textSize="20dp"
+                            android:text="Friends"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true" />
+
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </FrameLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</FrameLayout>

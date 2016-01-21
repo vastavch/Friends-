@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">Friends</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_profile">Profile</string>
+    <string name="title_activity_albums">Albums</string>
+    <string name="title_activity_detailed_album">DetailedAlbum</string>
+    <string name="title_activity_messages">Messages</string>
+    <string name="title_activity_friends_list">FriendsList</string>
+    <string name="title_activity_gd_view_adapter">gdViewAdapter</string>
+    <string name="title_activity_dialog">Dialog</string>
+    <string-array name="Privacy">
+        <item>Hide Album from friends</item>
+        <item>Show  Album to friends</item>
+    </string-array>
+    <string-array name="gender">
+        <item>Female</item>
+        <item>Male</item>
+    </string-array>
+    <string-array name="yesno">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+    <string name="title_activity_photo_adapter">photoAdapter</string>
+    <string name="title_activity_slide_show">SlideShow</string>
+    <string name="title_activity_select__user">Select_User</string>
+    <string name="title_activity_list__user__adapter">list_User_Adapter</string>
+    <string name="title_activity_user_search_adapter">UserSearchAdapter</string>
+    <string name="title_activity_profile_home">profile_home</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+
+    <string name="facebook_hashKey"></string>
+    <string name="facebook_app_id"></string>
+
+    <string name="twitter_API_Key"></string>
+    <string name="twitter_API_Secret"></string>
+    <string name="twitter_OwnerID"></string>
+    <string name="title_activity_gridview_item">gridview_item</string>
+    <string name="title_activity_message_right">message_right</string>
+    <string name="title_activity_user_list_item">user_list_item</string>
+    <string name="title_activity_message_left">message_left</string>
+    <string name="title_activity_messaging">Messaging</string>
+    <!-- Parse -->
+    <string name="parse_application_id"></string>
+    <string name="parse_client_id"></string>
+
+    <!-- PubNub -->
+    <string name="pubnub_publish_key"></string>
+    <string name="pubnub_subscribe_key"></string>
+    <!-- Messaging Activity -->
+    <string name="message_elipses">Message...</string>
+    <string name="send">Send</string>
+    <string name="title_activity_conversation">conversationActivity</string>
+    <string name="title_activity_setting__alert">Setting_Alert</string>
+</resources>

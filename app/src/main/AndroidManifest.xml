@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.srivastava.friends" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.write_external_storage"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <!--
+      IMPORTANT: Change "com.parse.starter.permission.C2D_MESSAGE" in the lines below
+      to match your app's package name + ".permission.C2D_MESSAGE".
+    -->
+    <permission
+        android:name="com.example.srivastava.friends.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.example.srivastava.friends.permission.C2D_MESSAGE" />
+
+    <application
+        android:name=".StartApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/iconl"
+        android:label="@string/app_name"
+
+        android:theme="@style/AppTheme" >
+        <activity android:name=".MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="com.parse.PushService" />
+
+        <receiver
+            android:name="com.parse.ParsePushBroadcastReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.parse.push.intent.RECEIVE" />
+                <action android:name="com.parse.push.intent.DELETE" />
+                <action android:name="com.parse.push.intent.OPEN" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.parse.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <!-- IMPORTANT: Change "com.parse.starter" to match your app's package name. -->
+                <category android:name="com.example.srivastava.friends" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".Profile"
+            android:label="@string/title_activity_profile" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Albums"
+            android:label="Albums" >
+        </activity>
+        <activity
+            android:name=".DetailedAlbum"
+            android:label="@string/title_activity_detailed_album" >
+        </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings" >
+        </activity>
+        <activity
+            android:name=".Messages"
+            android:label="@string/title_activity_messages" >
+        </activity>
+        <activity
+            android:name=".Signup"
+            android:label="Signup" >
+        </activity>
+        <activity
+            android:name=".FriendsList"
+            android:label="@string/title_activity_friends_list" >
+        </activity>
+        <activity
+            android:name=".gdViewAdapter"
+            android:label="@string/title_activity_gd_view_adapter" >
+        </activity>
+        <activity
+            android:name=".Dialog"
+            android:label="@string/title_activity_dialog" >
+        </activity>
+        <activity
+            android:name=".photoAdapter"
+            android:label="@string/title_activity_photo_adapter" >
+        </activity>
+        <activity
+            android:name=".SlideShow"
+            android:label="@string/title_activity_slide_show" >
+        </activity>
+        <activity
+            android:name=".Select_User"
+            android:label="@string/title_activity_select__user" >
+        </activity>
+        <activity
+            android:name=".list_User_Adapter"
+            android:label="@string/title_activity_list__user__adapter" >
+        </activity>
+        <activity
+            android:name=".UserSearchAdapter"
+            android:label="@string/title_activity_user_search_adapter" >
+        </activity>
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name=".gridview_item"
+            android:label="@string/title_activity_gridview_item" >
+        </activity>
+        <activity
+            android:name=".message_right"
+            android:label="@string/title_activity_message_right" >
+        </activity>
+        <activity
+            android:name=".user_list_item"
+            android:label="@string/title_activity_user_list_item" >
+        </activity>
+        <activity
+            android:name=".message_left"
+            android:label="@string/title_activity_message_left" >
+        </activity>
+        <activity
+            android:name=".conversationActivity"
+            android:label="@string/title_activity_conversation" >
+        </activity>
+
+
+
+        <activity
+            android:name=".Setting_Alert"
+            android:label="@string/title_activity_setting__alert" >
+        </activity>    </application>
+
+</manifest>
